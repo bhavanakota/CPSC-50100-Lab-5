@@ -28,7 +28,6 @@ public class DivisorCalc {
 			System.out.print("Enter the first value greater than 0: ");
 			num1 = scan.nextInt();
 		}
-
 		// Creating the num2 variable and inputting a value to it
 		System.out.print("Enter the second value greater than 0: ");
 		int num2 = scan.nextInt();
@@ -40,13 +39,11 @@ public class DivisorCalc {
 			System.out.print("Enter the first value greater than 0: \n");
 			num2 = scan.nextInt();
 		}
-
 		// Printing out the final product and the gcd
 		System.out.println("The gcd of " + num1 + " and " + num2 + " is: " + gcd(num1, num2));
 
 		scan.close();
 	}
-
 	// Creating the static int gcd
 	public static int gcd(int num1, int num2) {
 
