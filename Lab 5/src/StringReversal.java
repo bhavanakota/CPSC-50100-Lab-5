@@ -2,7 +2,7 @@
  * Create a class called StringReversal. Inside of it, create a recursive method 
  * called reverseString that accepts a String s and returns a new String which is s 
  * in reverse order. Create a driver program inside the main method to test your
- *  implementation.
+ * implementation.
  */
 
 import java.util.Scanner;
