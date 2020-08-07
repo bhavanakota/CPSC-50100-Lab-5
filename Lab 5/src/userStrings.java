@@ -29,7 +29,7 @@ public class userStrings {
 			outFile.write(user);
 			System.out.println("Enter your string. Enter DONE when finished.");
 			user = scan.nextLine();
-			// Added theBu "IgnoreCase" to make the program take both methods of DONE.
+			// Added the "IgnoreCase" to make the program take both methods of DONE.
 			if (user.equalsIgnoreCase("DONE")) {
 				outFile.close();
 				break;
