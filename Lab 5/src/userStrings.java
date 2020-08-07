@@ -5,6 +5,7 @@
  * Do not write the sentinel string to the output file.
  */
 
+// Importerd with an * since I wasn't sure what exactly I was going to be using
 import java.io.*;
 import java.util.Scanner;
 
@@ -14,7 +15,9 @@ public class userStrings {
 
 		// Invoking the scanner system and creating the new .txt file to export to
 		Scanner scan = new Scanner(System.in);
-		FileWriter file = new FileWriter("userStrings.txt");
+		FileWriter fw = new FileWriter("userStrings.txt");
+		BufferedWriter bw = new BufferedWriter(fw);
+		PrintWriter outFile = new PrintWriter(bw);
 
 		// Line to enter string and scan
 		System.out.println("Enter your string. Enter DONE when finished.");
@@ -23,15 +26,18 @@ public class userStrings {
 		// Creating this while loop to continuously keep printing to the .txt file and
 		// only ending once DONE is entered.
 		while (!user.equals("DONE")) {
-			file.write(user);
+			outFile.write(user);
 			System.out.println("Enter your string. Enter DONE when finished.");
 			user = scan.nextLine();
-			// Added the "IgnoreCase" to make the program take both methods of DONE.
+			// Added theBu "IgnoreCase" to make the program take both methods of DONE.
 			if (user.equalsIgnoreCase("DONE")) {
+				outFile.close();
 				break;
 			}
 		}
 		scan.close();
-		file.close();
+		fw.close();
+		bw.close();
+		outFile.close();
 	}
 }
